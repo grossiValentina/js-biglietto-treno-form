@@ -1,9 +1,10 @@
 // dati
-
+// bottone Conferma
 const buttons = document.getElementById("conferma");
 buttons.addEventListener("click", function() {
     console.log("Bene!");
     
+    //input
     const distanceElem = document.getElementById("distance");
     console.log(distanceElem);
     const distance = distanceElem.value;
@@ -24,22 +25,40 @@ buttons.addEventListener("click", function() {
     const minorenne = prezzoBase * 0.8;
 
     // calcolo prezzo biglietto per età
-    let prezzoFinale = ""
+    let prezzoFinale = 0;
 
      if (age > 65) {
           prezzoFinale = over65
     } else if (age > 18 && age < 65) {
-         prezzoFinale = fasciaInterm
+         prezzoFinale = fasciaInterm;
     } else {
-          prezzoFinale = minorenne
+          prezzoFinale = minorenne;
     }  
-    console.log(prezzoFinale)
+    console.log(prezzoFinale);
      
+
+    // preparazione messaggio 
+    const userGreeting = `Ciao!`
+    const userMessage = `Il prezzo finale del tuo biglietto è € ${prezzoFinale.toFixed(2)}`
+    console.log(userGreeting, userMessage);
+
+
+     // Otput
+     document.getElementById("greeting").innerHTML = userGreeting;
+     document.getElementById("message").innerHTML = userMessage;
+
+
+});
+ 
+
+
+// bottone Ripeti
+document.getElementById("Ripeti").addEventListener("click", function () {
+console.log("Ripeti!");
+
+     
+
+
 })
 
-// preparazione messaggio 
-const greeting = `Ciao!`
-const message = `Il prezzo finale del tuo biglietto è € ${prezzoFinale}`
-console.log(greeting, message);
-// Otput
-//document.getElementById("result").innerHTML = result
+
