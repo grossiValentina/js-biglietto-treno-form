@@ -50,15 +50,8 @@ buttons.addEventListener("click", function() {
 
 });
  
-
-
 // bottone Ripeti
 document.getElementById("Ripeti").addEventListener("click", function () {
 console.log("Ripeti!");
-
      
-
-
 })
-
-
