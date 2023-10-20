@@ -1,3 +1,7 @@
+// variabili da riutilizzare
+const distanceElem = document.getElementById("distance");
+const ageElem = document.getElementById("age");
+
 // dati
 // bottone Conferma
 const buttons = document.getElementById("conferma");
@@ -5,11 +9,9 @@ buttons.addEventListener("click", function() {
     console.log("Bene!");
     
     //input
-    const distanceElem = document.getElementById("distance");
     console.log(distanceElem);
     const distance = distanceElem.value;
     
-    const ageElem = document.getElementById("age");
     console.log(ageElem);
     const age = ageElem.value;
     
@@ -53,5 +55,10 @@ buttons.addEventListener("click", function() {
 // bottone Ripeti
 document.getElementById("Ripeti").addEventListener("click", function () {
 console.log("Ripeti!");
+distanceElem.innerHTML = "";
+ageElem.innerHTML = "";
+userMessage.innerHTML = "";
+
+
      
 })
